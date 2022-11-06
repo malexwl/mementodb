@@ -9,6 +9,6 @@ function updateTitleIfEmpty(titleFieldName, additionalFieldName, entry) {
    if (!title) {
       let additionalText = e.field(additionalFieldName);
       title = truncate(additionalText, 35);
-      e.set(titleFieldName, title);
    }
+   e.set(titleFieldName, title);
 }
