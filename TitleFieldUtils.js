@@ -3,12 +3,11 @@
 // Value to update is used from additionalField,
 //   which is cleaned from html
 //   and truncated to 35 chars.
-function updateTitleIfEmpty(titleFieldName, additionalFieldName) {
-   let e = entity();
-   var title = e.field(titleFieldName);
+function updateTitleIfEmpty(titleFieldName, additionalFieldName, entity) {
+   var title = entity.field(titleFieldName);
    if (!title) {
-      let additionalText = e.field(additionalFieldName);
+      let additionalText = entity.field(additionalFieldName);
       title = truncate(additionalText, 35);
-      e.set(titleFieldName, title);
+      entity.set(titleFieldName, title);
    }
 }
