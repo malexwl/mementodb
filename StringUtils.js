@@ -9,3 +9,9 @@ function removeHtml(html) {
      .replace(/<\/?[^>]+(>|$)/g, "")
      .replace(/&nbsp;/g," ");
 };
+
+// Remove html then truncate result
+function truncateAndRemoveHtml(str, n) {
+  let clearText = removeHtml(str);
+  return truncate(clearText, n);
+}
