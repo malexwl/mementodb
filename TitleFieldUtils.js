@@ -3,8 +3,8 @@
 // Value to update is used from additionalField,
 //   which is cleaned from html
 //   and truncated to 35 chars.
-function updateTitleIfEmpty(titleFieldName, additionalFieldName) {
-   let e = entry();
+function updateTitleIfEmpty(titleFieldName, additionalFieldName, entry) {
+   let e = entry;
    var title = e.field(titleFieldName);
    if (!title) {
       let additionalText = e.field(additionalFieldName);
