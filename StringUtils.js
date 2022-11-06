@@ -1,13 +1,21 @@
 // Truncate long string
 function truncate(str, n){
-  return (str.length > n) ? str.slice(0, n-1) + "..." : str;
+  var result = str;
+  if (str) {
+     result = (str.length > n) ? str.slice(0, n-1) + "..." : str;
+  }
+  return result;
 };
 
 // Remove html tags from string
 function removeHtml(html) {
-   return html
-     .replace(/<\/?[^>]+(>|$)/g, "")
-     .replace(/&nbsp;/g," ");
+  var result = html;
+  if (html) {
+     result = html
+       .replace(/<\/?[^>]+(>|$)/g, "")
+       .replace(/&nbsp;/g," ");
+  }
+  return result;
 };
 
 // Remove html then truncate result
